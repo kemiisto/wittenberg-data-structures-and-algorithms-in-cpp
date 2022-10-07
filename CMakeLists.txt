@@ -8,12 +8,11 @@ include_directories(include)
 find_package(Catch2 REQUIRED)
 
 set(TESTS
-    test_vector)
+    test_vector
+    test_list)
 
 foreach(TEST IN LISTS TESTS)
     message(STATUS ${TEST})
     add_executable(${TEST} test/${TEST}.cpp)
     target_link_libraries(${TEST} PRIVATE Catch2::Catch2WithMain)
 endforeach()
-
-
