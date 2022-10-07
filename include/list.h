@@ -124,13 +124,13 @@ namespace wittenberg {
         iterator erase(iterator pos) {
             iterator result(pos.curr->rlink);
             // link left neighbor's rlink to right neighbor
-            if (pos.curr = first) {
+            if (pos.curr == first) {
                 first = first->rlink;
             } else {
                 pos.curr->llink->rlink = pos.curr->rlink;
             }
             // link right neighbor's llink to left neighbor
-            if (pos.curr = last) {
+            if (pos.curr == last) {
                 last = last->llink;
             } else {
                 pos.curr->rlink->llink = pos.curr->llink;
